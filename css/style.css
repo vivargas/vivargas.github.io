@@ -1,0 +1,372 @@
+/* font-family: 'Poiret One', cursive; */
+html, body {
+  height: 100%;
+  margin: 0px;
+  background: #222;
+  scroll-behavior: smooth;
+}
+
+.header-background {
+  background-color: #222;
+  height: 80%;
+}
+
+.title {
+  font-family: 'Poiret One', cursive;
+  color: #efefef;
+  text-align: right;
+  font-size: 35vh;
+  margin: 0px;
+  padding-right: 40px;
+}
+
+h2{
+  font-family: 'Poiret One', cursive;
+  padding: 50px;
+  color: white;
+  text-align: center;
+  font-size: 8vh;
+  margin: 0px;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+  color: #efefef;
+  font-weight: 300;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+main {
+  background: #111;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr)
+}
+
+.about-text {
+  font-size: 24px;
+  text-align: justify;
+  grid-column: 6/9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-container{
+  grid-column: 2/5
+}
+
+.about-img{
+  max-width: 100%;
+  padding-top: 50px;
+}
+
+hr{
+  border-top: 3px dashed;
+  border-bottom: 0px;
+  color: #555;
+  margin: 100px 30vh;
+
+}
+
+.pdf{
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  text-align: center;
+  font-size: 2em;
+  color: #efefef;
+}
+
+.pdf:hover{
+  text-decoration: underline;
+}
+
+.pdf-container{
+  text-align: center;
+  padding: 100px;
+}
+
+ul{
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5em;
+  padding-left: 35vw;
+}
+
+/* -------------------------- NAV --------------------------- */
+
+
+
+
+header {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #222;
+  position: relative;
+  z-index: 1;
+}
+
+.header-bg {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  transform: scale(0);
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 1s ease-out;
+  opacity: 0.95;
+}
+
+.header-check {
+  width: 35px;
+  height: 35px;
+  position: fixed;
+  opacity: 0;
+  z-index: 1;
+}
+
+.header-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: transparent;
+  position: fixed;
+  z-index: 0;
+}
+
+.header-icon::before,
+.header-icon::after {
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  display: block;
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transform-origin: 0 50%;
+  transition: all 0.2s;
+}
+
+.header-icon::before {
+  top: 14.5px;
+}
+
+.header-icon::after {
+  top: 20.5px;
+}
+
+.navigation-list {
+  transform: translate(-100vw, -100vh);
+  list-style: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transition: all 0.7s ease-out;
+}
+
+.navigation-list > li {
+  font-family: 'Poiret One', cursive;
+  font-size: 45px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.navigation-list li a:link,
+.navigation-list li a:visited {
+  color: white;
+  text-decoration: none;
+  border-bottom: 2px solid white;
+  display: inline-block;
+  width: 200px;
+  height: 53px;
+  text-align: center;
+  padding: 1px;
+}
+
+.navigation-list li a:hover,
+.navigation-list li a:active {
+  background: linear-gradient(150deg,
+      transparent 10%,
+      #999 10%,
+      #999 90%,
+      transparent 90%);
+  border-bottom: 2px solid white;
+  color: black;
+}
+
+.header-check:hover {
+  cursor: pointer;
+}
+
+.header-check:hover~.header-icon::before {
+  top: 12.5px;
+}
+
+.header-check:hover~.header-icon::after {
+  top: 22.5px;
+}
+
+.header-check:checked~.header-icon::before {
+  transform: translate(-7px, -5px) rotate(45deg);
+}
+
+.header-check:checked:hover~.header-icon::before {
+  top: 15px;
+}
+
+.header-check:checked~.header-icon::after {
+  transform: translate(-7px, 3.5px) rotate(-45deg);
+}
+
+.header-check:checked:hover~.header-icon::after {
+  top: 20.5px;
+}
+
+.header-check:checked~.navigation-list {
+  transform: translate(-50%, -50%);
+}
+
+.header-check:checked~.header-bg {
+  transform: scale(170);
+  position: fixed;
+}
+
+
+
+
+
+
+/* -------------------------- NAV --------------------------- */
+
+
+
+
+
+/* -------------------------- GALLERY ----------------------- */
+
+
+
+
+
+
+.gallery{
+  display: grid;
+  margin-right: 15vw;
+  margin-left: 15vw;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px; /* this sets the width of the container*/
+
+}
+/* this will make the images responsive */
+.images{
+  max-width:100%;
+  min-height: 100%;
+}
+/* this styling is needed to postion the overlay */
+.imgcontainer{
+  position:relative;
+  width: 100%;
+}
+
+.overlay{
+  position:absolute;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+  background-color:rgba(0,0,0,.7);
+  width:100%;
+  overflow:hidden;
+  transform: scale(0);
+  transition-duration: 500ms;
+  transition-property: transform;
+  transition-timing-function:ease-in-out;
+}
+
+/* our hover effects are here */
+
+.imgcontainer:hover .overlay{
+  transform: scale(1);
+}
+
+.text{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  font-size: 2em;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+.text > h3{
+  font-family: 'Poiret One', sans-serif;
+}
+
+.photography-text{
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------- GALLERY ----------------------- */
+
+
+
+
+/* -------------------------- FOOTER ------------------------ */
+
+
+
+
+
+
+
+footer{
+  height: 300px;
+  background: black;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.contact-text{
+  font-size: 1.3em;
+}
+
+
+
+
+
+/* -------------------------- FOOTER ------------------------ */
+
+
+/* sexy nav https://outlab.digital/ */
+/* hamburger nav icons https://codepen.io/ainalem/pen/LJYRxz?editors=1100 */
+/* cursor https://codepen.io/clementGir/pen/RQqvQx */
+/* nav ideas https://codepen.io/codeycodes/pen/YzPvJaq
+          https://codepen.io/Alana_Weiss/pen/wvBxejY
+          https://codepen.io/rafaelavlucas/pen/gObdWYV */
+/* what --- https://codepen.io/clementGir/pen/GvOYGp */
